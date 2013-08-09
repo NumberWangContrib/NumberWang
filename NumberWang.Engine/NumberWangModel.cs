@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NumberWang.Engine
 {
@@ -10,24 +11,21 @@ namespace NumberWang.Engine
 
         public bool IsNumberWang(decimal wang)
         {
-            try
-            {
-                if (_guesses.Count > 5)
-                {
-                    _guesses.RemoveAt(0);
-                }
+            _guesses.Add(wang);
 
-                if (_guesses.Contains(wang))
-                {
-                    return false;
-                }
-
-                return _random.Next(0, 1000) < 132;
-            }
-            finally
+            if (_guesses.Count > 5)
             {
-                _guesses.Add(wang);
+                _guesses.RemoveAt(0);
             }
+
+            if (_guesses.Count(x => x == wang) % 2 == 0)
+            {
+                return false;
+            }
+
+            bool result = _random.Next(0, 1000) < 132;
+
+            return result;
         }
     }
 }
