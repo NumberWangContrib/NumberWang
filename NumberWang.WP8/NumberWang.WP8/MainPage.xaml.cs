@@ -19,5 +19,10 @@ namespace NumberWang.WP8
         {
             NavigationService.Navigate(new Uri("/NumberWang.xaml", UriKind.Relative));
         }
+
+        private void OnRules(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Rules.xaml", UriKind.Relative));
+        }
     }
 }
