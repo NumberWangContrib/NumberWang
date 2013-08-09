@@ -36,6 +36,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="George6thModel.cs" />
     <Compile Include="NumberWangModel.cs" />
     <Compile Include="NumberWangType.cs" />
     <Compile Include="NumberWangTypeExtensions.cs" />

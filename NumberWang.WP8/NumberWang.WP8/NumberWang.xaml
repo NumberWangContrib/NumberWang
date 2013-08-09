@@ -22,8 +22,12 @@
 
         <!--  TitlePanel contains the name of the application and page title  -->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Numberwang" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Bauhaus 93" Foreground="Cyan"/>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="" />
+            <TextBlock Margin="9,-7,0,0"
+                       FontFamily="Bauhaus 93"
+                       Foreground="Cyan"
+                       Style="{StaticResource PhoneTextTitle1Style}"
+                       Text="Numberwang" />
         </StackPanel>
 
         <!--  ContentPanel - place additional content here  -->
@@ -42,9 +46,9 @@
         </Grid>
 
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FFFF00F3" Offset="1"/>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="Black" />
+                <GradientStop Offset="1" Color="#FFFF00F3" />
             </LinearGradientBrush>
         </Grid.Background>
     </Grid>
