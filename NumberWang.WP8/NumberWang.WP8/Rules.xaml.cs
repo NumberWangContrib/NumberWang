@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
+﻿using System.Windows;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 
 namespace NumberWang
 {
@@ -15,6 +8,16 @@ namespace NumberWang
         public Rules()
         {
             InitializeComponent();
+        }
+
+        private void StandardRulesChecked(object sender, RoutedEventArgs e)
+        {
+            GeorgeViRules.IsChecked = false;
+        }
+
+        private void OnGeorgeViRulesChecked(object sender, RoutedEventArgs e)
+        {
+            StandardRules.IsChecked = false;
         }
     }
 }

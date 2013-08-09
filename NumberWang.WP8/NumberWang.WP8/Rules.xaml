@@ -29,27 +29,10 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="300"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                </Grid.RowDefinitions>
-                
-                <toolkit:ToggleSwitch x:Name="StandardRulesSwitch" Grid.Column="0" Grid.Row="0" Content="ggg"/>
-                <toolkit:ToggleSwitch x:Name="GeorgeViRules" Grid.Column="0" Grid.Row="1"/>
-                
-           </Grid>-->
+           
            <StackPanel>
-                <toolkit:ToggleSwitch x:Name="StandardRulesSwitch" Content="Standard rules"/>
-                <toolkit:ToggleSwitch x:Name="GeorgeViRules" Content="George VI rules"/>
+                <toolkit:ToggleSwitch x:Name="StandardRules" Content="Standard rules" Checked="StandardRulesChecked"/>
+                <toolkit:ToggleSwitch x:Name="GeorgeViRules" Content="George VI rules" Checked="OnGeorgeViRulesChecked"/>
             </StackPanel>
 
         </Grid>
