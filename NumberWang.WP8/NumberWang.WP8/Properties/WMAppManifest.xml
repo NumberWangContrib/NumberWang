@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="en-US"/>
+  <App xmlns="" ProductID="{de7d0313-afa1-4d37-975a-9781fa1cf30d}" Title="NumberWang.WP8" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="NumberWang.WP8 author" Description="Sample description" Publisher="NumberWang.WP8" PublisherID="{4a6b2d16-31d2-4a54-b6c3-c52b5993cbfb}">
+    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING"/>
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO"/>
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK"/>
+      <Capability Name="ID_CAP_SENSORS"/>
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT"/>
+    </Capabilities>
+    <Tasks>
+      <DefaultTask  Name ="_default" NavigationPage="MainPage.xaml"/>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="NumberWang.WP8Token" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <Title>NumberWang.WP8</Title>
+          <BackContent></BackContent>
+          <BackBackgroundImageURI></BackBackgroundImageURI>
+          <BackTitle></BackTitle>
+          <DeviceLockImageURI></DeviceLockImageURI>
+          <HasLarge></HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA"/>
+      <ScreenResolution Name="ID_RESOLUTION_WXGA"/>
+      <ScreenResolution Name="ID_RESOLUTION_HD720P"/>
+    </ScreenResolutions>
+  </App>
+</Deployment>
