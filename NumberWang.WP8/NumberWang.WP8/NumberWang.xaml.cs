@@ -26,6 +26,7 @@ namespace NumberWang
             if (!decimal.TryParse(txtGuess.Text, out value))
             {
                 txtResult.Text = "Thats not even a number!";
+                txtGuess.Focus();
                 return;
             }
 

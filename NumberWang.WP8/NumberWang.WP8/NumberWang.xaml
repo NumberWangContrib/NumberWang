@@ -42,21 +42,27 @@
                         Click="OnPlay">
                     Guess
                 </Button>
-                <TextBlock x:Name="PlayerTurn" Margin="0,24,0,0" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="PlayerTurn"
+                           Margin="0,24,0,0"
+                           HorizontalAlignment="Center" />
             </StackPanel>
-            
+
             <StackPanel VerticalAlignment="Bottom">
-                <TextBlock x:Name="PlayerOne" Text="Player 1 Score:" VerticalAlignment="Bottom">
-                    <Run x:Name="PlayerOneRun"/>
+                <TextBlock x:Name="PlayerOne"
+                           VerticalAlignment="Bottom"
+                           Text="Player 1 Score:">
+                    <Run x:Name="PlayerOneRun" />
                 </TextBlock>
 
-                <TextBlock x:Name="PlayerTwo" Text="Player 2 Score:" VerticalAlignment="Bottom">
-                    <Run x:Name="PlayerTwoRun"/>
+                <TextBlock x:Name="PlayerTwo"
+                           VerticalAlignment="Bottom"
+                           Text="Player 2 Score:">
+                    <Run x:Name="PlayerTwoRun" />
                 </TextBlock>
             </StackPanel>
-            
-            
-            
+
+
+
         </Grid>
 
         <Grid.Background>
