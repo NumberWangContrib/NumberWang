@@ -37,6 +37,15 @@ namespace NumberWang
             SetScore(_isPlayerTwoTurn);
 
             _isPlayerTwoTurn = !_isPlayerTwoTurn;
+
+            if (_isPlayerTwoTurn)
+            {
+                PlayerTurn.Text = "Player Two Turn";
+            }
+            else
+            {
+                PlayerTurn.Text = "Player One Turn";
+            }
         }
 
         private void SetScore(bool isPlayerTwoTurn)
@@ -72,6 +81,15 @@ namespace NumberWang
                     PlayerOne.Visibility = Visibility.Visible;
                     PlayerTwo.Visibility = Visibility.Visible;
                     PlayerTurn.Visibility = Visibility.Visible;
+
+                    if (_isPlayerTwoTurn)
+                    {
+                        PlayerTurn.Text = "Player Two Turn";
+                    }
+                    else
+                    {
+                        PlayerTurn.Text = "Player One Turn";
+                    }
                 }
             }
         }
