@@ -14,7 +14,7 @@
                             mc:Ignorable="d">
 
     <!--  LayoutRoot is the root grid where all page content is placed  -->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -22,10 +22,8 @@
 
         <!--  TitlePanel contains the name of the application and page title  -->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="MY APPLICATION" />
-            <TextBlock Margin="9,-7,0,0"
-                       Style="{StaticResource PhoneTextTitle1Style}"
-                       Text="page name" />
+            <TextBlock Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Numberwang" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Bauhaus 93" Foreground="Cyan"/>
         </StackPanel>
 
         <!--  ContentPanel - place additional content here  -->
@@ -42,6 +40,13 @@
                 </Button>
             </StackPanel>
         </Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFFF00F3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
     </Grid>
 
 </phone:PhoneApplicationPage>
