@@ -58,8 +58,12 @@
                        Style="{StaticResource PhoneTextNormalStyle}"
                        Text="Now you can play the maths quiz that simply everyone is talking about! Any hobbies? Good. Any pets? Great. Any funny stories? Right - let's begin!"
                        TextWrapping="Wrap" />
-            
-            <Button Click="OnPlay" Height="100" Width="200">Play</Button>
+
+            <Button Width="200"
+                    Height="100"
+                    Click="OnPlay">
+                Play
+            </Button>
         </Grid>
 
         <!--
