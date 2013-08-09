@@ -17,7 +17,7 @@ namespace NumberWang.WP8
 
         private void OnPlay(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/NumberWang.xaml"));
+            NavigationService.Navigate(new Uri("/NumberWang.xaml", UriKind.Relative));
         }
     }
 }
