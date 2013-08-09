@@ -78,6 +78,9 @@ namespace NumberWang
                     PlayerTwo.Visibility = Visibility.Visible;
                     PlayerTurn.Visibility = Visibility.Visible;
 
+                    PlayerOneRun.Text = " 0";
+                    PlayerTwoRun.Text = " 0";
+
                     WhosTurn();
                 }
             }
