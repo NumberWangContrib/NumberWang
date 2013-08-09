@@ -71,6 +71,13 @@
 
                 <Button Width="200"
                         Height="100"
+                        Margin="0,0,0,24"
+                        Click="OnMultiplayer">
+                    Multiplayer
+                </Button>
+
+                <Button Width="200"
+                        Height="100"
                         Click="OnRules">
                     Rules
                 </Button>

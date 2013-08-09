@@ -17,12 +17,17 @@ namespace NumberWang.WP8
 
         private void OnPlay(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/NumberWang.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/NumberWang.xaml?id=single", UriKind.Relative));
         }
 
         private void OnRules(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Rules.xaml", UriKind.Relative));
+        }
+
+        private void OnMultiplayer(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/NumberWang.xaml?id=multiplayer", UriKind.Relative));
         }
     }
 }
