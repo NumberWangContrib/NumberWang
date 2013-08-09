@@ -40,7 +40,7 @@ ASPNETDB.MDF
 aspnetdb_log.ldf
 *.sap
 */PerformanceLogs/*
-/packages
+**/packages
 */AppPackages/*
 *.resw.download
 /*.n[Cc]runchsolution

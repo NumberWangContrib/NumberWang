@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -28,6 +29,28 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <!--<Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                
+                <toolkit:ToggleSwitch x:Name="StandardRulesSwitch" Grid.Column="0" Grid.Row="0" Content="ggg"/>
+                <toolkit:ToggleSwitch x:Name="GeorgeViRules" Grid.Column="0" Grid.Row="1"/>
+                
+           </Grid>-->
+           <StackPanel>
+                <toolkit:ToggleSwitch x:Name="StandardRulesSwitch" Content="Standard rules"/>
+                <toolkit:ToggleSwitch x:Name="GeorgeViRules" Content="George VI rules"/>
+            </StackPanel>
 
         </Grid>
     </Grid>
