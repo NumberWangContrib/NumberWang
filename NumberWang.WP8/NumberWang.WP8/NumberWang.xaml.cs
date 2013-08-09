@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
@@ -37,6 +38,11 @@ namespace NumberWang
             SetScore(_isPlayerTwoTurn);
 
             _isPlayerTwoTurn = !_isPlayerTwoTurn;
+
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+            var values = Enum.GetValues(typeof(PageOrientation)).Cast<PageOrientation>().ToArray();
+            var orientation = values[new Random().Next(0, values.Length)];
+            Orientation = orientation;
         }
 
         private void SetScore(bool isPlayerTwoTurn)
