@@ -34,7 +34,10 @@ namespace NumberWang
 
             txtGuess.Text = string.Empty;
 
-            SetScore(_isPlayerTwoTurn);
+            if (result != NumberWangType.NotNumberWang)
+            {
+                SetScore(_isPlayerTwoTurn);
+            }
 
             _isPlayerTwoTurn = !_isPlayerTwoTurn;
 
