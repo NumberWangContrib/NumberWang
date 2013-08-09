@@ -9,7 +9,7 @@ namespace NumberWang.Engine
         private readonly List<decimal> _guesses = new List<decimal>();
         private readonly Random _random = new Random();
 
-        public bool IsNumberWang(decimal wang)
+        public NumberWangType TestNumberWang(decimal wang)
         {
             _guesses.Add(wang);
 
@@ -18,14 +18,24 @@ namespace NumberWang.Engine
                 _guesses.RemoveAt(0);
             }
 
-            if (_guesses.Count(x => x == wang) % 2 == 0)
+            if (_guesses.Count(x => x == wang)%2 == 0)
             {
-                return false;
+                return NumberWangType.NotNumberWang;
             }
 
-            bool result = _random.Next(0, 1000) < 132;
+            int result = _random.Next(0, 10000);
 
-            return result;
+            if (result < 250)
+            {
+                return NumberWangType.IsWangerNum;
+            }
+
+            if (result < 1350)
+            {
+                return NumberWangType.IsNumberWang;
+            }
+
+            return NumberWangType.NotNumberWang;
         }
     }
 }

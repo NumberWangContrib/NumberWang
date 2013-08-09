@@ -15,9 +15,20 @@ namespace NumberWang
 
         private void OnPlay(object sender, RoutedEventArgs e)
         {
-            bool result = _numberWangModel.IsNumberWang(69);
+            decimal value;
 
-            txtResult.Text = result ? "That's NumberWang!!" : "Not Numberwang";
+            if (!decimal.TryParse(txtGuess.Text, out value))
+            {
+                txtResult.Text = string.Empty;
+                txtGuess.Text = "Thats not even a number!";
+                return;
+            }
+
+            NumberWangType result = _numberWangModel.TestNumberWang(value);
+
+            txtResult.Text = result.ToWangString();
+
+            txtGuess.Text = string.Empty;
         }
     }
 }
