@@ -1,4 +1,4 @@
-﻿using NumberWang.WP8.Resources;
+﻿using NumberWang.Resources;
 
 namespace NumberWang.WP8
 {

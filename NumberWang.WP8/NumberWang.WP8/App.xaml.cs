@@ -6,7 +6,7 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using NumberWang.WP8.Resources;
+using NumberWang.Resources;
 
 namespace NumberWang.WP8
 {
