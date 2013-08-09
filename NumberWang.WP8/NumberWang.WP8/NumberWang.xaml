@@ -42,7 +42,7 @@
                         Click="OnPlay">
                     Guess
                 </Button>
-                <TextBlock x:Name="PlayerTurn" Margin="0,24,0,0"/>
+                <TextBlock x:Name="PlayerTurn" Margin="0,24,0,0" HorizontalAlignment="Center"/>
             </StackPanel>
             
             <StackPanel VerticalAlignment="Bottom">

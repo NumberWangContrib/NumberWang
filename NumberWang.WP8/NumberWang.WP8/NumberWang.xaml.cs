@@ -35,7 +35,10 @@ namespace NumberWang
 
             txtGuess.Text = string.Empty;
 
-            SetScore(_isPlayerTwoTurn);
+            if (result != NumberWangType.NotNumberWang)
+            {
+                SetScore(_isPlayerTwoTurn);
+            }
 
             _isPlayerTwoTurn = !_isPlayerTwoTurn;
 
@@ -43,6 +46,7 @@ namespace NumberWang
             var values = Enum.GetValues(typeof(PageOrientation)).Cast<PageOrientation>().ToArray();
             var orientation = values[new Random().Next(0, values.Length)];
             Orientation = orientation;
+            WhosTurn();
         }
 
         private void SetScore(bool isPlayerTwoTurn)
@@ -78,9 +82,25 @@ namespace NumberWang
                     PlayerOne.Visibility = Visibility.Visible;
                     PlayerTwo.Visibility = Visibility.Visible;
                     PlayerTurn.Visibility = Visibility.Visible;
+
+                    PlayerOneRun.Text = " 0";
+                    PlayerTwoRun.Text = " 0";
+
+                    WhosTurn();
                 }
             }
         }
 
+        private void WhosTurn()
+        {
+            if (_isPlayerTwoTurn)
+            {
+                PlayerTurn.Text = "Player Two Turn";
+            }
+            else
+            {
+                PlayerTurn.Text = "Player One Turn";
+            }
+        }
     }
 }
