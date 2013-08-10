@@ -5,9 +5,16 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
 
-    <!--Application Resources-->
+    <!--Application Resources-->   
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:NumberWang.WP8" x:Key="LocalizedStrings"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <local:LocalizedStrings xmlns:local="clr-namespace:NumberWang.WP8" x:Key="LocalizedStrings"/>
+            <!-- other resources in here -->
+        </ResourceDictionary>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

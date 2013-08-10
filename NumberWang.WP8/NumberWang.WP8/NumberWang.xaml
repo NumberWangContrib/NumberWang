@@ -23,10 +23,8 @@
         <!--  TitlePanel contains the name of the application and page title  -->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="" />
-            <TextBlock Margin="9,-7,0,0"
-                       FontFamily="Bauhaus 93"
-                       Foreground="Cyan"
-                       Style="{StaticResource PhoneTextTitle1Style}"
+            <TextBlock Margin="9,-7,0,0"                       
+                       Style="{StaticResource NumberwangTitleTextStyle}"
                        Text="Numberwang" />
         </StackPanel>
 
@@ -35,11 +33,10 @@
               Grid.Row="1"
               Margin="12,0,12,0">
             <StackPanel>
-                <TextBlock x:Name="txtResult" />
-                <TextBox x:Name="txtGuess" InputScope="Digits" />
-                <Button Width="200"
-                        Height="100"
-                        Click="OnPlay">
+                <TextBlock x:Name="txtResult" Style="{StaticResource NumberwangTextStyle}" HorizontalAlignment="Center" FontSize="32"/>
+                <TextBox x:Name="txtGuess" InputScope="Digits" Foreground="Black" Style="{StaticResource NumberwangTextBox}" />
+                <Button  BorderBrush="White"                       Height="100"
+                        Click="OnPlay" Style="{StaticResource NumberwangButton}">
                     Guess
                 </Button>
                 <TextBlock x:Name="PlayerTurn"
@@ -50,18 +47,16 @@
             <StackPanel VerticalAlignment="Bottom">
                 <TextBlock x:Name="PlayerOne"
                            VerticalAlignment="Bottom"
-                           Text="Player 1 Score:">
+                           Text="Player 1 Score:" Style="{StaticResource NumberwangTextStyle}">
                     <Run x:Name="PlayerOneRun" />
                 </TextBlock>
 
                 <TextBlock x:Name="PlayerTwo"
                            VerticalAlignment="Bottom"
-                           Text="Player 2 Score:">
+                           Text="Player 2 Score:" Style="{StaticResource NumberwangTextStyle}">
                     <Run x:Name="PlayerTwoRun" />
                 </TextBlock>
             </StackPanel>
-
-
 
         </Grid>
 

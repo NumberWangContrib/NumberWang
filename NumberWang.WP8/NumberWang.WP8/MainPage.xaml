@@ -45,7 +45,7 @@
                     Grid.Row="0"
                     Margin="12,17,0,28">
             <TextBlock Margin="9,-7,0,0"
-                       Style="{StaticResource PhoneTextTitle1Style}"
+                       Style="{StaticResource NumberwangTitleTextStyle}"
                        Text="Let's play Numberwang!"
                        TextWrapping="Wrap" />
         </StackPanel>
@@ -57,28 +57,28 @@
 
             <StackPanel>
                 <TextBlock Margin="12,0,0,24"
-                       Style="{StaticResource PhoneTextNormalStyle}"
+                       Style="{StaticResource NumberwangTextStyle}"
                        Text="Now you can play the maths quiz that simply everyone is talking about! Any hobbies? Good. Any pets? Great. Any funny stories? Right - let's begin!"
-                       TextWrapping="Wrap" />
+                       TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Left" />
 
             
-                <Button Width="200"
+                <Button
                         Height="100"
                         Margin="0,0,0,24"
-                        Click="OnPlay">
+                        Click="OnPlay" Style="{StaticResource NumberwangButton}">
                     Play
                 </Button>
 
-                <Button Width="200"
+                <Button
                         Height="100"
                         Margin="0,0,0,24"
-                        Click="OnMultiplayer">
+                        Click="OnMultiplayer" Style="{StaticResource NumberwangButton}">
                     Multiplayer
                 </Button>
 
-                <Button Width="200"
+                <Button
                         Height="100"
-                        Click="OnRules">
+                        Click="OnRules" Style="{StaticResource NumberwangButton}">
                     Rules
                 </Button>
             </StackPanel>
