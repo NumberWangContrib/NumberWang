@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using Microsoft.Phone.Controls;
+using System.Windows.Controls;
 
 namespace NumberWang.WP8
 {
@@ -9,7 +10,7 @@ namespace NumberWang.WP8
         // Constructor
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();          
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
@@ -28,6 +29,11 @@ namespace NumberWang.WP8
         private void OnMultiplayer(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/NumberWang.xaml?id=multiplayer", UriKind.Relative));
+        }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            mediaPlayer.Source = new Uri("/Assets/Audio/Intro.mp3", UriKind.Relative);
         }
     }
 }

@@ -18,5 +18,20 @@ namespace NumberWang.Engine
                     throw new InvalidOperationException("Unknown NumberWangType");
             }
         }
+
+        public static Uri ToWangAudioFile(this NumberWangType numberWangType)
+        {
+            switch (numberWangType)
+            {
+                case NumberWangType.IsNumberWang:
+                    return new Uri("/Assets/Audio/ThatsNumberWang1.mp3", UriKind.Relative);
+                case NumberWangType.IsWangerNum:
+                    return null; // TODO get more sound effects!
+                case NumberWangType.NotNumberWang:
+                    return null;
+                default:
+                    throw new InvalidOperationException("Unknown NumberWangType");
+            }
+        }
     }
 }

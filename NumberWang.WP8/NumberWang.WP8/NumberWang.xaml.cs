@@ -34,6 +34,10 @@ namespace NumberWang
 
             txtResult.Text = result.ToWangString();
 
+            var audioResult = result.ToWangAudioFile();
+
+            mediaPlayer.Source = audioResult;
+
             txtGuess.Text = string.Empty;
 
             if (result != NumberWangType.NotNumberWang)
