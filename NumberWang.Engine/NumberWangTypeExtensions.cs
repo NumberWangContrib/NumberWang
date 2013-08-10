@@ -21,10 +21,15 @@ namespace NumberWang.Engine
 
         public static Uri ToWangAudioFile(this NumberWangType numberWangType)
         {
+            var rndm = new Random(DateTime.UtcNow.Millisecond);
+
             switch (numberWangType)
             {
                 case NumberWangType.IsNumberWang:
-                    return new Uri("/Assets/Audio/ThatsNumberWang1.mp3", UriKind.Relative);
+                    if (rndm.Next(2) == 1)
+                        return new Uri("/Assets/Audio/ThatsNumberWang1.mp3", UriKind.Relative);
+                    else
+                        return new Uri("/Assets/Audio/ThatsNumberWang2.mp3", UriKind.Relative);
                 case NumberWangType.IsWangerNum:
                     return null; // TODO get more sound effects!
                 case NumberWangType.NotNumberWang:

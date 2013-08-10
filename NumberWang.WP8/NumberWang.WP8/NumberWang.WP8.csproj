@@ -139,6 +139,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Audio\ThatsNumberWang1.mp3" />
+    <Content Include="Assets\Audio\ThatsNumberWang2.mp3" />
     <Content Include="Assets\BAUHS93.TTF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

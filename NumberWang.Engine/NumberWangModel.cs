@@ -30,7 +30,7 @@ namespace NumberWang.Engine
                 return NumberWangType.IsWangerNum;
             }
 
-            if (result < 1350)
+            if (result < 5850)
             {
                 return NumberWangType.IsNumberWang;
             }
